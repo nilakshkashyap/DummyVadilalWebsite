@@ -1,0 +1,117 @@
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.typehead {
+  font-size: 50px;
+  color: #6b3d2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-weight: bolder;
+  margin-top: 0px;
+  font-family: MainFont3;
+}
+
+.buttonAll,
+.buttonHome,
+.buttonImpulse {
+  height: 60px;
+  width: 200px;
+  display: flex;
+  border-radius: 50px;
+  border: 2px solid #6b3d2b;
+  font-size: 24px;
+  font-weight: bolder;
+  box-shadow: 7px 7px 1px #6b3d2b;
+  transition: all 0.3s ease;
+  color: #6b3d2b;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: MainFont3;
+}
+
+.buttonAll:hover,
+.buttonHome:hover,
+.buttonImpulse:hover {
+  box-shadow: 4px 4px 1px #6b3d2b;
+  cursor: pointer;
+  transform: translate(4px, 4px);
+}
+
+.all-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.list-item2 {
+  height: 400px;
+  width: 380px;
+  border-radius: 30px;
+  position: relative;
+  z-index: 3000;
+  transition: transform 0.8s ease;
+  bottom: 0;
+  margin-bottom: 50px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.list-item2:hover {
+  border: 1px solid #6b3d2b;
+  cursor: pointer;
+}
+
+.list-image2 {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 240px;
+  transition: transform 0.8s ease;
+}
+
+.list-item2:hover .carousel-image2 {
+  height: 250px;
+}
+
+.list-image2 img {
+  height: 100%;
+}
+
+.list-content2 {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 5px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.list-title2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #6b3d2b;
+  align-self: flex-start;
+  margin-top: -6px;
+  margin-bottom: -11px;
+  font-family: MainFont3;
+}
+
+.list-review2 {
+  font-size: 1.2rem;
+  color: #6b3d2b;
+  align-self: flex-start;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

@@ -1,0 +1,238 @@
+.wrapper1 {
+  font-size: 12vmin;
+  height: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: screen;
+
+  &.invert1 {
+    span {
+      color: rgb(255, 255, 255);
+
+      &::before {
+        -webkit-text-stroke: 0.07em var(--color);
+      }
+    }
+  }
+
+  span {
+    --color: #b6acff;
+    font-family: "Teko", "Teko", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    color: var(--color);
+    letter-spacing: -0.005em;
+
+    &::before,
+    &::after {
+      content: attr(data-text);
+      display: block;
+      position: relative;
+      padding: 0 0.1em;
+      z-index: 1;
+    }
+
+    &::before {
+      position: absolute;
+      -webkit-text-stroke: 0.1em black;
+      z-index: 0;
+    }
+
+    &:first-child {
+      transform: translate(0.165em, 0.33em);
+    }
+
+    &:last-child {
+      --color: #f00540;
+      transform: translate(0.1em, 0.25em);
+    }
+  }
+}
+
+.new-products {
+  min-height: 100%;
+  max-height: 100%;
+  position: relative;
+}
+.new-kids {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 120px;
+  position: relative;
+  z-index: -1;
+  margin-bottom: -70px;
+}
+
+.new-kids h1 {
+  margin-left: 25px;
+  color: #f00540;
+  margin-bottom: 0px;
+  font-size: 45px;
+  font-family: MainFont3;
+}
+
+.new-kids main {
+  align-items: start;
+  margin-top: -10px;
+}
+.wrapper1 {
+  justify-content: start;
+  align-items: start;
+  text-align: left;
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+
+.carousel-container {
+  width: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 120px;
+  padding-right: 120px;
+  z-index: 1;
+  position: relative;
+  height: 500px;
+}
+
+.error-check {
+  z-index: 2;
+  position: relative;
+  height: 500px;
+}
+
+.carousel-item {
+  background-color: #fee4ca;
+  height: 400px;
+  width: 280px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 3000;
+  transition: transform 0.3s ease;
+  bottom: 0;
+  margin-top: 80px;
+}
+
+.carousel-item:hover {
+  transform: translateY(-50px);
+  cursor: pointer;
+}
+
+.carousel-image {
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: -90px;
+  transform: rotate(-15deg);
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover .carousel-image {
+  transform: translateY(-60px) rotate(0deg);
+  cursor: pointer;
+}
+
+.carousel-image img {
+  height: 280px;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0px;
+  height: 45px;
+  margin-top: 100px;
+}
+
+.carousel-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6b3d2b;
+  margin-bottom: -10px;
+  font-family: MainFont3;
+}
+
+.carousel-review {
+  font-size: 1rem;
+  color: #6b3d2b;
+  margin-top: -5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.new-tag {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 210px;
+  height: 30px;
+
+  background: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #6b3d2b;
+  box-shadow: 4px 4px 4px 0px #6b3d2b;
+}
+.new {
+  color: #6b3d2b;
+  font-weight: bold;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  background-color: rgba(237, 235, 235, 0.5);
+  border-radius: 50%;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  color: #f00540;
+  size: 60px;
+  stroke-width: 5px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.left-arrow {
+  width: 50px;
+  height: 50px;
+  stroke-width: 1px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.right-arrow {
+  width: 50px;
+  height: 50px;
+  stroke-width: 1px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.custom-arrow:hover {
+  width: 70px;
+  height: 70px;
+  stroke-width: 1.3px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.next-arrow {
+  right: -5px;
+}
+
+.prev-arrow {
+  left: -5px;
+}

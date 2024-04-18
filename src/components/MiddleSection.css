@@ -1,0 +1,129 @@
+.middle-section {
+  background-color: hsl(345, 96%, 48%);
+  width: 86%;
+  height: calc(20vh + 100px);
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  text-align: center;
+  justify-content: space-between;
+  margin-left: 7%;
+  border-radius: 40px;
+  position: absolute;
+  top: 110%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.middle-section h1 {
+  text-align: left;
+  margin-left: 110px;
+  margin-top: 80px;
+  font-family: MainFont3;
+  font-size: 40px;
+}
+
+.points1 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 70px;
+  padding-right: 30px;
+}
+
+.points1 h2 {
+  margin-top: 10px;
+  font-family: MainFont3;
+  font-size: 25px;
+}
+
+.points1 main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -60px;
+  padding: 20px;
+}
+
+.points2 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-right: 150px;
+  margin-bottom: 105px;
+}
+
+.points2 h2 {
+  margin-top: -20px;
+  font-family: MainFont3;
+  font-size: 25px;
+}
+
+.points2 main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -70px;
+  padding: 60px;
+}
+
+.wrapper {
+  font-size: 12vmin;
+  height: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: screen;
+
+  &.invert {
+    span {
+      color: black;
+
+      &::before {
+        -webkit-text-stroke: 0.07em var(--color);
+      }
+    }
+  }
+
+  span {
+    --color: #b6acff;
+    font-family: "Teko", "Teko", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    color: var(--color);
+    letter-spacing: -0.005em;
+
+    &::before,
+    &::after {
+      content: attr(data-text);
+      display: block;
+      position: relative;
+      padding: 0 0.1em;
+      z-index: 1;
+    }
+
+    &::before {
+      position: absolute;
+      -webkit-text-stroke: 0.1em black;
+      z-index: 0;
+    }
+
+    &:first-child {
+      transform: translate(0.165em, 0.33em);
+    }
+
+    &:last-child {
+      --color: #ffba11;
+      transform: translate(0.1em, 0.25em);
+    }
+  }
+}

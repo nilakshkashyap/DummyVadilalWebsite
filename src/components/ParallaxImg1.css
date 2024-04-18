@@ -1,0 +1,86 @@
+* .image-container {
+  position: relative;
+  margin-left: -10px;
+  width: 100%+10px;
+  height: 200vh;
+  object-fit: contain;
+}
+
+.about-cafe1,
+.about-cafe2 {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.text-item1 {
+  position: absolute;
+  top: 75%;
+  left: 75%;
+  height: 400px;
+  width: 570px;
+  border-radius: 30px 30px 0 0;
+  transform: translate(-50%, -50%);
+  color: #6b3d2b;
+  font-size: 24px;
+  background-color: rgb(255, 255, 255);
+}
+
+.text-item2 {
+  position: absolute;
+  top: 75%;
+  left: 25%;
+  height: 400px;
+  width: 570px;
+  border-radius: 30px 30px 0 0;
+  transform: translate(-50%, -50%);
+  color: #6b3d2b;
+  font-size: 24px;
+  background-color: rgb(255, 255, 255);
+}
+
+.about-cafe1 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.about-cafe2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.item-logo1 {
+  height: 100px;
+  width: 100px;
+  margin-left: 17px;
+  margin-top: 10px;
+}
+
+.item-logo2 {
+  height: 100px;
+  width: 100px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.shop-head {
+  margin-left: 32px;
+  margin-top: -10px;
+  font-size: 36px;
+  font-weight: bolder;
+  font-family: MainFont3;
+}
+
+.shop-text {
+  margin-left: 32px;
+  margin-top: -10px;
+  font-size: 23px;
+  padding-right: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

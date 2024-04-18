@@ -1,0 +1,49 @@
+.footer-container {
+  width: 100%+10;
+  margin-left: -10px;
+}
+
+.white-foot {
+  height: 80px;
+  display: flex;
+  padding: 0 80px;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-txt,
+.insta-logo,
+.youtube-logo,
+.facebook-logo {
+  margin-left: 15px;
+}
+
+.logo-vad {
+  height: 90%;
+}
+
+.insta-logo,
+.facebook-logo,
+.youtube-logo {
+  width: 40px;
+}
+
+.brown-foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 60px;
+  font-weight: bold;
+  color: white;
+  background-color: #6d4b3e;
+}
+
+.social-txt {
+  font-size: 20px;
+  color: #6d4b3e;
+}
