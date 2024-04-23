@@ -23,7 +23,7 @@ const TextOverlay = () => {
         Moments of Delight for Everyone
       </h1>
       <h2 style={{ fontSize: "1.7rem" }}>
-        Tasteful experiences that make you go Waah!
+        Tasteful experiences that make you go Waah!!!
       </h2>
     </div>
   );

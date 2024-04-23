@@ -13,6 +13,7 @@ const ContactUs = ({ contactImg }) => {
   });
 
   const [formErrors, setFormErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -25,13 +26,33 @@ const ContactUs = ({ contactImg }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const errors = {};
+
     if (!formData.name) {
       errors.name = "Name is required";
+    } else if (!formData.phone) {
+      errors.phone = "Phone is required";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      errors.phone = "Phone number is invalid";
+    } else if (!formData.company) {
+      errors.company = "Company is required";
+    } else if (!formData.email) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Email is invalid";
     }
     setFormErrors(errors);
 
     if (Object.keys(errors).length === 0) {
-      console.log("Form submitted:", formData);
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        company: "",
+        phone: "",
+        email: "",
+        occupation: "",
+        interest: "",
+        message: "",
+      });
     }
   };
 
@@ -71,21 +92,24 @@ const ContactUs = ({ contactImg }) => {
                 value={formData.name}
                 onChange={handleInputChange}
               />
-
+              {formErrors.name && (
+                <span className="error-message1">
+                  <br />
+                  {formErrors.name}
+                </span>
+              )}
               <input
                 type="text"
                 id="company"
                 name="company"
                 placeholder="Company"
-                className="form-company"
+                className={`form-company ${formErrors.company ? "error" : ""}`}
                 value={formData.company}
                 onChange={handleInputChange}
               />
-              {formErrors.name && (
-                <span className="error-message">
-                  <br />
-                  {formErrors.name}
-                </span>
+
+              {formErrors.company && (
+                <span className="error-message2">{formErrors.company}</span>
               )}
             </div>
             <div className="form-col2">
@@ -94,10 +118,16 @@ const ContactUs = ({ contactImg }) => {
                 id="phone"
                 name="phone"
                 placeholder="Phone"
-                className="form-phone"
+                className={`form-phone ${formErrors.phone ? "error" : ""}`}
                 value={formData.phone}
                 onChange={handleInputChange}
               />
+              {formErrors.phone && (
+                <span className="error-message1">
+                  <br />
+                  {formErrors.phone}
+                </span>
+              )}
               <input
                 type="email"
                 id="email"
@@ -108,7 +138,7 @@ const ContactUs = ({ contactImg }) => {
                 onChange={handleInputChange}
               />
               {formErrors.email && (
-                <span className="error-message">
+                <span className="error-message2">
                   <br />
                   {formErrors.email}
                 </span>
@@ -150,6 +180,9 @@ const ContactUs = ({ contactImg }) => {
             Send
           </button>
         </form>
+        {submitted && (
+          <div className="submitted-message">Form submitted successfully!</div>
+        )}
       </div>
     </div>
   );
